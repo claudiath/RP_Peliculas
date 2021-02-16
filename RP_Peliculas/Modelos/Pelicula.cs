@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,6 +13,8 @@ namespace RP_Peliculas.Modelos
     public string Genero { get; set; }
     public string Descripcion { get; set; }
     public decimal Precio { get; set; }
+
+    [DataType(DataType.Date)] //va mostrar solo la fecha en la página web creada
     public DateTime FechaLanzamiento { get; set; }
     }
 }
