@@ -34,6 +34,17 @@ namespace RP_Peliculas.Pages.Peliculas
             {
                 pelicula = pelicula.Where(S => S.Titulo.Contains(searchString));
             }
+
+            IQueryable<string> generoQuery = from m in _context.Pelicula
+                                             orderby m.Genero
+                                             select m.Genero;
+            if (!string.IsNullOrEmpty(generoPelicula))
+            {
+                pelicula = pelicula.Where(s => s.Genero == generoPelicula);
+
+            }
+            genero = new SelectList(await generoQuery.Distinct().ToListAsync());
+
             Pelicula = await pelicula.ToListAsync(); // para mostrar lo que se filtra en la variable que hemos creado, si no se filtra, se muestra todo
             //Pelicula = await _context.Pelicula.ToListAsync();
         }

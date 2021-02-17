@@ -14,7 +14,7 @@ namespace RP_Peliculas.Modelos
     public string Genero { get; set; }
     public string Descripcion { get; set; }
 
-    [Column(TypeName = "decimal(18,2)")] // atributo para añadir decimales
+    [Column(TypeName = "decimal(18, 2)")] // atributo para añadir decimales
         public decimal Precio { get; set; }
 
     [DataType(DataType.Date)] //va mostrar solo la fecha en la página web creada
