@@ -10,11 +10,11 @@
 
 <form>
     <p>
-        Filtrar por título: <input type="text" asp-for="searchString" />
-        <input type="submit" value="Filtrar" />
+        Filtrar por título y género: <input type="text" asp-for="searchString" />
         <select asp-for="generoPelicula" asp-items="Model.genero">
             <option value="">Todos</option>
         </select>
+        <input type="submit" value="Filtrar" />
     </p>
 </form>
 
