@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RP_Peliculas.Data;
+using System.Globalization;
 
 namespace RP_Peliculas
 {
@@ -34,6 +35,14 @@ namespace RP_Peliculas
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            var defaultCulture = new CultureInfo("es-es");
+            var localizationOptions = new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture(defaultCulture),
+                SupportedCultures = new List<CultureInfo> { defaultCulture },
+                SupportedUICultures = new List<CultureInfo> { defaultCulture }
+            };
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -56,6 +65,13 @@ namespace RP_Peliculas
             {
                 endpoints.MapRazorPages();
             });
+        }
+    }
+
+    internal class RequestCulture : Microsoft.AspNetCore.Localization.RequestCulture
+    {
+        public RequestCulture(CultureInfo culture) : base(culture)
+        {
         }
     }
 }
