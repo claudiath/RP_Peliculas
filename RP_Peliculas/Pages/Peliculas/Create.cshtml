@@ -2,7 +2,7 @@
 @model RP_Peliculas.Pages.Peliculas.CreateModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Crear";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
@@ -40,14 +40,14 @@
                 <span asp-validation-for="Pelicula.FechaLanzamiento" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Añadir" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Regresar</a>
 </div>
 
 @section Scripts {

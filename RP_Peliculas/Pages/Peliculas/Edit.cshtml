@@ -2,11 +2,11 @@
 @model RP_Peliculas.Pages.Peliculas.EditModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
 <h4>Pelicula</h4>
 <hr />
@@ -41,14 +41,14 @@
                 <span asp-validation-for="Pelicula.FechaLanzamiento" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Guardar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index">Regresar</a>
 </div>
 
 @section Scripts {

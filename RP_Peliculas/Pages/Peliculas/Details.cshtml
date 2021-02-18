@@ -2,11 +2,11 @@
 @model RP_Peliculas.Pages.Peliculas.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<h1>Detalles</h1>
 
 <div>
     <h4>Pelicula</h4>
@@ -45,6 +45,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Pelicula.Id">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Pelicula.Id">Editar</a> |
+    <a asp-page="./Index">Regresar</a>
 </div>
